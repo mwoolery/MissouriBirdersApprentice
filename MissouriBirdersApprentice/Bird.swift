@@ -39,8 +39,11 @@ class Bird : Equatable, CustomStringConvertible{
         self.numberOfSightings = 0
     }
     
-    func updateNumSightings(){
-        numberOfSightings += 1
+    func updateNumSightings(num:Int){
+        numberOfSightings = num
+    }
+    func locationToString() ->String {
+        return "\(location.latitude), \(location.longitude)"
     }
 }
 

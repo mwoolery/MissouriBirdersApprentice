@@ -10,11 +10,12 @@ import UIKit
 
 class BirdsTableViewController: UITableViewController {
     
-    var County:County!
+    var county:County!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = county.name
+        tableView.register(CountyTableViewCell.self, forCellReuseIdentifier: "bird_cell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,19 +32,20 @@ class BirdsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        
+        return county.birdArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "bird", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bird_cell", for: indexPath)
 
-        
+        cell.textLabel?.text = county.birdArray[indexPath.row].name
 
         return cell
     }
@@ -58,8 +60,8 @@ class BirdsTableViewController: UITableViewController {
  */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let birdVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "bird_view_controller") as! BirdViewController
-        birdVC.bird =
-        self.navigationController?.pushViewController(cityVC, animated: true)
+        birdVC.bird = county.birdArray[indexPath.row]
+        self.navigationController?.pushViewController(birdVC, animated: true)
     }
     
 

@@ -10,11 +10,23 @@ import UIKit
 
 class BirdViewController: UIViewController {
     
-    var bird:String! //bird
+    var bird:Bird! //bird
     
+    @IBOutlet weak var locationLBL: UILabel!
+    @IBOutlet weak var dateLBL: UILabel!
+    @IBOutlet weak var sightingsTF: UITextField!
+    @IBAction func updateSightingsBTN(_ sender: Any) {
+        let val:Int = Int(sightingsTF.text!)!
+        if sightingsTF.text != nil && val >= 0{
+            bird.updateNumSightings(num: Int(sightingsTF.text!)!)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let location = bird.locationToString()
+        locationLBL.text = location
+        dateLBL.text = String(bird.dateFirstSighted)
+        sightingsTF.text = String(bird.numberOfSightings)
     }
 
     override func didReceiveMemoryWarning() {

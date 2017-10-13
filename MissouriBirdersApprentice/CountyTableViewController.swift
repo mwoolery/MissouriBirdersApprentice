@@ -18,18 +18,20 @@ class CountyTableViewController: UITableViewController {
     
     
     
-    //var county:[County] = [County(name:"Nodaway", birdArray: [Bird(name: "American Robin", latinName: "Turdus migratorius", location: CLLocationCoordinate2D(latitude: 10.30, longitude: 44.34), dateFirstSighted: "10-11-2017", numberOfSightings: 0), Bird(name: "Black-chested Sparrow", latinName: "Peucaea humeralis", location: CLLocationCoordinate2D(latitude: 10.40, longitude: 44.40), dateFirstSighted: "10-11-2017", numberOfSightings: 0), Bird(name: "Eastern Bluebird", latinName: "Sialia sialis", location: CLLocationCoordinate2D(latitude: 10.50, longitude: 44.50), dateFirstSighted: "10-11-2017", numberOfSightings: 0)]), County(name: "Holt", birdArray: [Bird(name: "Snow Goose", latinName: "Anser caerulescens", location: CLLocationCoordinate2D(latitude: 10.40, longitude: 44.44), dateFirstSighted: "10-11-2017", numberOfSightings: 0), Bird(name: "Ross's Goose", latinName: "Anser rossii", location: CLLocationCoordinate2D(latitude: 10.20, longitude: 44.46), dateFirstSighted: "10-11-2017", numberOfSightings: 0), Bird(name: "Brant", latinName: "Branta bernicla", location: CLLocationCoordinate2D(latitude: 10.70, longitude: 44.00), dateFirstSighted: "10-11-2017", numberOfSightings: 0)]), County(name: "Gentry", birdArray: [Bird(name: "Trumpeter Swan", latinName: "Cygnus buccinator", location: CLLocationCoordinate2D(latitude: 10.00, longitude: 44.13), dateFirstSighted: "10-11-2017", numberOfSightings: 0), Bird(name: "Rock Dove", latinName: "Columba livia", location: CLLocationCoordinate2D(latitude: 10.10, longitude: 44.30), dateFirstSighted: "10-11-2017", numberOfSightings: 0), Bird(name: "Black Rail", latinName: "Laterallus jamaicensis", location: CLLocationCoordinate2D(latitude: 10.90, longitude: 44.20), dateFirstSighted: "10-11-2017", numberOfSightings: 0)])]
-    
-    var county:[County] = [County(name:"Nodaway", birdArray: [Bird(name: "American Robin", latinName: "Turdus migratorius", location: CLLocationCoordinate2D(latitude: 10.30, longitude: 44.34), dateFirstSighted: "10-11-2017"), Bird(name: "Black-chested Sparrow", latinName: "Peucaea humeralis", location: CLLocationCoordinate2D(latitude: 10.40, longitude: 44.40), dateFirstSighted: "10-11-2017"), Bird(name: "Eastern Bluebird", latinName: "Sialia sialis", location: CLLocationCoordinate2D(latitude: 10.50, longitude: 44.50), dateFirstSighted: "10-11-2017")]), County(name: "Holt", birdArray: [Bird(name: "Snow Goose", latinName: "Anser caerulescens", location: CLLocationCoordinate2D(latitude: 10.40, longitude: 44.44), dateFirstSighted: "10-11-2017"), Bird(name: "Ross's Goose", latinName: "Anser rossii", location: CLLocationCoordinate2D(latitude: 10.20, longitude: 44.46), dateFirstSighted: "10-11-2017"), Bird(name: "Brant", latinName: "Branta bernicla", location: CLLocationCoordinate2D(latitude: 10.70, longitude: 44.00), dateFirstSighted: "10-11-2017")]), County(name: "Gentry", birdArray: [Bird(name: "Trumpeter Swan", latinName: "Cygnus buccinator", location: CLLocationCoordinate2D(latitude: 10.00, longitude: 44.13), dateFirstSighted: "10-11-2017"), Bird(name: "Rock Dove", latinName: "Columba livia", location: CLLocationCoordinate2D(latitude: 10.10, longitude: 44.30), dateFirstSighted: "10-11-2017"), Bird(name: "Black Rail", latinName: "Laterallus jamaicensis", location: CLLocationCoordinate2D(latitude: 10.90, longitude: 44.20), dateFirstSighted: "10-11-2017")])]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
+        self.navigationItem.title = "Counties"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Go Back!", style: .done, target: nil, action: nil)
+        
+        tableView.register(CountyTableViewCell.self, forCellReuseIdentifier: "county_cell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,23 +43,32 @@ class CountyTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return State.countyArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "county_cell", for: indexPath)
+        
+        let county = State.countyNum(indexPath.row)
+        cell.textLabel?.text = county.name
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let birdsTVC:BirdsTableViewController = BirdsTableViewController()
+        birdsTVC.county = State.countyArray[indexPath.row]
+        self.navigationController?.pushViewController(birdsTVC, animated: true)
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
