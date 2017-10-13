@@ -13,6 +13,9 @@
 		CDB486671F914AE300C644C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB486651F914AE300C644C8 /* LaunchScreen.storyboard */; };
 		CDB486721F914AE300C644C8 /* MissouriBirdersApprenticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB486711F914AE300C644C8 /* MissouriBirdersApprenticeTests.swift */; };
 		CDB4867D1F914AE300C644C8 /* MissouriBirdersApprenticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4867C1F914AE300C644C8 /* MissouriBirdersApprenticeUITests.swift */; };
+		CDB4868B1F914E0D00C644C8 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4868A1F914E0D00C644C8 /* Bird.swift */; };
+		CDB4868D1F91544700C644C8 /* County.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4868C1F91544700C644C8 /* County.swift */; };
+		CDB4868F1F9154D000C644C8 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4868E1F9154D000C644C8 /* State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		CDB486781F914AE300C644C8 /* MissouriBirdersApprenticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissouriBirdersApprenticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB4867C1F914AE300C644C8 /* MissouriBirdersApprenticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissouriBirdersApprenticeUITests.swift; sourceTree = "<group>"; };
 		CDB4867E1F914AE300C644C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB4868A1F914E0D00C644C8 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		CDB4868C1F91544700C644C8 /* County.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = County.swift; sourceTree = "<group>"; };
+		CDB4868E1F9154D000C644C8 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				CDB486631F914AE300C644C8 /* Assets.xcassets */,
 				CDB486651F914AE300C644C8 /* LaunchScreen.storyboard */,
 				CDB486681F914AE300C644C8 /* Info.plist */,
+				CDB4868A1F914E0D00C644C8 /* Bird.swift */,
+				CDB4868C1F91544700C644C8 /* County.swift */,
+				CDB4868E1F9154D000C644C8 /* State.swift */,
 			);
 			path = MissouriBirdersApprentice;
 			sourceTree = "<group>";
@@ -253,6 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB4865F1F914AE300C644C8 /* ViewController.swift in Sources */,
+				CDB4868D1F91544700C644C8 /* County.swift in Sources */,
+				CDB4868B1F914E0D00C644C8 /* Bird.swift in Sources */,
+				CDB4868F1F9154D000C644C8 /* State.swift in Sources */,
 				CDB4865D1F914AE300C644C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
