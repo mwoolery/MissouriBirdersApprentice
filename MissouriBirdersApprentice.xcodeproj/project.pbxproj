@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CDB4865D1F914AE300C644C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4865C1F914AE300C644C8 /* AppDelegate.swift */; };
 		CDB4865F1F914AE300C644C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4865E1F914AE300C644C8 /* ViewController.swift */; };
-		CDB486621F914AE300C644C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB486601F914AE300C644C8 /* Main.storyboard */; };
 		CDB486641F914AE300C644C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB486631F914AE300C644C8 /* Assets.xcassets */; };
 		CDB486671F914AE300C644C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB486651F914AE300C644C8 /* LaunchScreen.storyboard */; };
 		CDB486721F914AE300C644C8 /* MissouriBirdersApprenticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB486711F914AE300C644C8 /* MissouriBirdersApprenticeTests.swift */; };
@@ -37,7 +36,6 @@
 		CDB486591F914AE300C644C8 /* MissouriBirdersApprentice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissouriBirdersApprentice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB4865C1F914AE300C644C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDB4865E1F914AE300C644C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CDB486611F914AE300C644C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDB486631F914AE300C644C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDB486661F914AE300C644C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDB486681F914AE300C644C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			children = (
 				CDB4865C1F914AE300C644C8 /* AppDelegate.swift */,
 				CDB4865E1F914AE300C644C8 /* ViewController.swift */,
-				CDB486601F914AE300C644C8 /* Main.storyboard */,
 				CDB486631F914AE300C644C8 /* Assets.xcassets */,
 				CDB486651F914AE300C644C8 /* LaunchScreen.storyboard */,
 				CDB486681F914AE300C644C8 /* Info.plist */,
@@ -231,7 +228,6 @@
 			files = (
 				CDB486671F914AE300C644C8 /* LaunchScreen.storyboard in Resources */,
 				CDB486641F914AE300C644C8 /* Assets.xcassets in Resources */,
-				CDB486621F914AE300C644C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +289,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CDB486601F914AE300C644C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDB486611F914AE300C644C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CDB486651F914AE300C644C8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -420,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MissouriBirdersApprentice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nwmissouri.edu.MissouriBirdersApprentice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -433,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MissouriBirdersApprentice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nwmissouri.edu.MissouriBirdersApprentice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
