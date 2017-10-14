@@ -12,6 +12,7 @@ class BirdViewController: UIViewController {
     
     var bird:Bird! //bird
     
+    @IBOutlet weak var birdIV: UIImageView!
     @IBOutlet weak var locationLBL: UILabel!
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var sightingsTF: UITextField!
@@ -27,6 +28,7 @@ class BirdViewController: UIViewController {
         locationLBL.text = location
         dateLBL.text = String(bird.dateFirstSighted)
         sightingsTF.text = String(bird.numberOfSightings)
+        birdIV.image = UIImage(named: "\(bird.name).jpg")
     }
 
     override func didReceiveMemoryWarning() {

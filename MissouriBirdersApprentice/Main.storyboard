@@ -153,10 +153,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-6W-kNL">
+                                <rect key="frame" x="60" y="304" width="269" height="303"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="birdIV" destination="4MB-6W-kNL" id="r8Y-Jc-pTF"/>
                         <outlet property="dateLBL" destination="pHx-OH-YKf" id="U5s-KY-y3h"/>
                         <outlet property="locationLBL" destination="TsG-tX-gO6" id="TNY-Db-3Zj"/>
                         <outlet property="sightingsTF" destination="eou-lb-mih" id="T2C-T4-28K"/>

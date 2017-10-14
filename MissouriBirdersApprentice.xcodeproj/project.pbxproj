@@ -61,6 +61,15 @@
 		CDB486961F9157D200C644C8 /* BirdsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsTableViewController.swift; sourceTree = "<group>"; };
 		CDB486981F91583900C644C8 /* BirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdViewController.swift; sourceTree = "<group>"; };
 		CDB4869A1F916FB300C644C8 /* CountyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyTableViewCell.swift; sourceTree = "<group>"; };
+		CDB4869C1F918D5900C644C8 /* American Robin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "American Robin.jpg"; sourceTree = "<group>"; };
+		CDB4869D1F918D5F00C644C8 /* Black Rail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Black Rail.jpg"; sourceTree = "<group>"; };
+		CDB4869E1F918D6100C644C8 /* Brant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Brant.jpg; sourceTree = "<group>"; };
+		CDB486A01F918D6700C644C8 /* Rock Dove.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Rock Dove.jpeg"; sourceTree = "<group>"; };
+		CDB486A11F918D6900C644C8 /* Ross's Goose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ross's Goose.jpg"; sourceTree = "<group>"; };
+		CDB486A21F918D6D00C644C8 /* Snow Goose.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Snow Goose.jpg"; sourceTree = "<group>"; };
+		CDB486A31F918D7000C644C8 /* Trumpeter Swan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Trumpeter Swan.jpg"; sourceTree = "<group>"; };
+		CDB486A41F918D8100C644C8 /* Black-chested Sparrow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Black-chested Sparrow.jpg"; sourceTree = "<group>"; };
+		CDB486A51F918DF300C644C8 /* Eastern Bluebird.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Eastern Bluebird.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +120,15 @@
 		CDB4865B1F914AE300C644C8 /* MissouriBirdersApprentice */ = {
 			isa = PBXGroup;
 			children = (
+				CDB4869C1F918D5900C644C8 /* American Robin.jpg */,
+				CDB4869D1F918D5F00C644C8 /* Black Rail.jpg */,
+				CDB486A41F918D8100C644C8 /* Black-chested Sparrow.jpg */,
+				CDB4869E1F918D6100C644C8 /* Brant.jpg */,
+				CDB486A51F918DF300C644C8 /* Eastern Bluebird.jpg */,
+				CDB486A01F918D6700C644C8 /* Rock Dove.jpeg */,
+				CDB486A11F918D6900C644C8 /* Ross's Goose.jpg */,
+				CDB486A21F918D6D00C644C8 /* Snow Goose.jpg */,
+				CDB486A31F918D7000C644C8 /* Trumpeter Swan.jpg */,
 				CDB4865C1F914AE300C644C8 /* AppDelegate.swift */,
 				CDB4865E1F914AE300C644C8 /* ViewController.swift */,
 				CDB486631F914AE300C644C8 /* Assets.xcassets */,
