@@ -18,7 +18,7 @@ class BirdViewController: UIViewController {
     @IBAction func updateSightingsBTN(_ sender: Any) {
         let val:Int = Int(sightingsTF.text!)!
         if sightingsTF.text != nil && val >= 0{
-            bird.updateNumSightings(num: Int(sightingsTF.text!)!)
+            bird.updateNumSightings(num: val)
         }
     }
     override func viewDidLoad() {

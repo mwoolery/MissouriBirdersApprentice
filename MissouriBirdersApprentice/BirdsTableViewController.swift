@@ -46,7 +46,8 @@ class BirdsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bird_cell", for: indexPath)
 
         cell.textLabel?.text = county.birdArray[indexPath.row].name
-
+        cell.detailTextLabel?.text = county.birdArray[indexPath.row].latinName
+        cell.imageView?.image = UIImage(named: "\(county.birdArray[indexPath.row].name).jpg")
         return cell
     }
     /*
