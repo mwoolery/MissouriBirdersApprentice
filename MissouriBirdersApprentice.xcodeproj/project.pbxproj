@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CDB4865D1F914AE300C644C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4865C1F914AE300C644C8 /* AppDelegate.swift */; };
-		CDB4865F1F914AE300C644C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4865E1F914AE300C644C8 /* ViewController.swift */; };
 		CDB486641F914AE300C644C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB486631F914AE300C644C8 /* Assets.xcassets */; };
 		CDB486671F914AE300C644C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB486651F914AE300C644C8 /* LaunchScreen.storyboard */; };
 		CDB486721F914AE300C644C8 /* MissouriBirdersApprenticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB486711F914AE300C644C8 /* MissouriBirdersApprenticeTests.swift */; };
@@ -43,7 +42,6 @@
 /* Begin PBXFileReference section */
 		CDB486591F914AE300C644C8 /* MissouriBirdersApprentice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissouriBirdersApprentice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB4865C1F914AE300C644C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDB4865E1F914AE300C644C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDB486631F914AE300C644C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDB486661F914AE300C644C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDB486681F914AE300C644C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +95,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD64D42E1F952B960073E6B0 /* Birds */ = {
+			isa = PBXGroup;
+			children = (
+				CDB4869C1F918D5900C644C8 /* American Robin.jpg */,
+				CDB4869D1F918D5F00C644C8 /* Black Rail.jpg */,
+				CDB486A41F918D8100C644C8 /* Black-chested Sparrow.jpg */,
+				CDB4869E1F918D6100C644C8 /* Brant.jpg */,
+				CDB486A51F918DF300C644C8 /* Eastern Bluebird.jpg */,
+				CDB486A01F918D6700C644C8 /* Rock Dove.jpeg */,
+				CDB486A11F918D6900C644C8 /* Ross's Goose.jpg */,
+				CDB486A21F918D6D00C644C8 /* Snow Goose.jpg */,
+				CDB486A31F918D7000C644C8 /* Trumpeter Swan.jpg */,
+			);
+			path = Birds;
+			sourceTree = "<group>";
+		};
 		CDB486501F914AE300C644C8 = {
 			isa = PBXGroup;
 			children = (
@@ -120,17 +134,8 @@
 		CDB4865B1F914AE300C644C8 /* MissouriBirdersApprentice */ = {
 			isa = PBXGroup;
 			children = (
-				CDB4869C1F918D5900C644C8 /* American Robin.jpg */,
-				CDB4869D1F918D5F00C644C8 /* Black Rail.jpg */,
-				CDB486A41F918D8100C644C8 /* Black-chested Sparrow.jpg */,
-				CDB4869E1F918D6100C644C8 /* Brant.jpg */,
-				CDB486A51F918DF300C644C8 /* Eastern Bluebird.jpg */,
-				CDB486A01F918D6700C644C8 /* Rock Dove.jpeg */,
-				CDB486A11F918D6900C644C8 /* Ross's Goose.jpg */,
-				CDB486A21F918D6D00C644C8 /* Snow Goose.jpg */,
-				CDB486A31F918D7000C644C8 /* Trumpeter Swan.jpg */,
+				CD64D42E1F952B960073E6B0 /* Birds */,
 				CDB4865C1F914AE300C644C8 /* AppDelegate.swift */,
-				CDB4865E1F914AE300C644C8 /* ViewController.swift */,
 				CDB486631F914AE300C644C8 /* Assets.xcassets */,
 				CDB486651F914AE300C644C8 /* LaunchScreen.storyboard */,
 				CDB486681F914AE300C644C8 /* Info.plist */,
@@ -295,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB4865F1F914AE300C644C8 /* ViewController.swift in Sources */,
 				CDB4868D1F91544700C644C8 /* County.swift in Sources */,
 				CDB4868B1F914E0D00C644C8 /* Bird.swift in Sources */,
 				CDB486991F91583900C644C8 /* BirdViewController.swift in Sources */,
@@ -558,6 +562,7 @@
 				CDB486831F914AE300C644C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDB486841F914AE300C644C8 /* Build configuration list for PBXNativeTarget "MissouriBirdersApprenticeTests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +571,7 @@
 				CDB486861F914AE300C644C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDB486871F914AE300C644C8 /* Build configuration list for PBXNativeTarget "MissouriBirdersApprenticeUITests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +580,7 @@
 				CDB486891F914AE300C644C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

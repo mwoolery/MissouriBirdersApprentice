@@ -8,14 +8,17 @@
 
 import UIKit
 
+//content dependent on bird passed in
 class BirdViewController: UIViewController {
     
     var bird:Bird! //bird
     
+    //stuff information is stored into
     @IBOutlet weak var birdIV: UIImageView!
     @IBOutlet weak var locationLBL: UILabel!
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var sightingsTF: UITextField!
+    // used to change the sighting count, has error checking
     @IBAction func updateSightingsBTN(_ sender: Any) {
         let val:Int = Int(sightingsTF.text!)!
         if sightingsTF.text != nil && val >= 0{
@@ -24,6 +27,7 @@ class BirdViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        //fills the items with the information for the bird
         let location = bird.locationToString()
         locationLBL.text = location
         dateLBL.text = String(bird.dateFirstSighted)

@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-
+// bird class that will be used to make bird objects
 class Bird : Equatable, CustomStringConvertible{
     //customstringconvertible to be used to test for equality amongst birds
     var description: String {
@@ -23,13 +23,14 @@ class Bird : Equatable, CustomStringConvertible{
     }
     
     
-    
+    //its properties
     var name:String
     var latinName:String
     var location: CLLocationCoordinate2D
     var dateFirstSighted: String
     var numberOfSightings: Int
     
+    //initializer
     init(name:String, latinName:String, location:CLLocationCoordinate2D, dateFirstSighted:String)
     {
         self.name = name
@@ -38,10 +39,11 @@ class Bird : Equatable, CustomStringConvertible{
         self.dateFirstSighted = dateFirstSighted
         self.numberOfSightings = 0
     }
-    
+    //updates the number of sightings to what number is passed in
     func updateNumSightings(num:Int){
         numberOfSightings = num
     }
+    // used to print the location
     func locationToString() ->String {
         return "\(location.latitude), \(location.longitude)"
     }

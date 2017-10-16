@@ -8,6 +8,7 @@
 
 import UIKit
 
+// for the county table cells
 class CountyTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?){

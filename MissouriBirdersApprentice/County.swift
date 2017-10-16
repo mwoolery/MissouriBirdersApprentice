@@ -8,6 +8,7 @@
 
 import Foundation
 
+//used to make a county and has birds found in county
 struct County{
     var name: String
     //array of birds

@@ -23,13 +23,13 @@ class CountyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        // make the navigation item and register the cell
         self.navigationItem.title = "Counties"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Go Back!", style: .done, target: nil, action: nil)
         
         tableView.register(CountyTableViewCell.self, forCellReuseIdentifier: "county_cell")
     }
-    
+    //reload the data each time it appears
     override func viewWillAppear(_ animated: Bool){
         tableView.reloadData()
     }
@@ -40,7 +40,8 @@ class CountyTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
+    //only 1 section used
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -51,7 +52,7 @@ class CountyTableViewController: UITableViewController {
         return State.countyArray.count
     }
 
-    
+    // lists the counties
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "county_cell", for: indexPath)
         
@@ -62,7 +63,7 @@ class CountyTableViewController: UITableViewController {
 
         return cell
     }
-    
+    // makes the bird view controller based on what bird is selected
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let birdsTVC:BirdsTableViewController = BirdsTableViewController()
         birdsTVC.county = State.countyArray[indexPath.row]
