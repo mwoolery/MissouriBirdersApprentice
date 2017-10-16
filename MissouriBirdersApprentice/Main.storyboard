@@ -73,11 +73,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oiG-Yj-fR1">
-                                            <rect key="frame" x="284" y="-2" width="68" height="47"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oiG-Yj-fR1">
+                                            <rect key="frame" x="250" y="-2" width="68" height="47"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="47" id="CLa-rx-mnY"/>
+                                                <constraint firstAttribute="width" constant="68" id="PKe-Jl-fnk"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="oiG-Yj-fR1" secondAttribute="trailing" constant="57" id="3V0-FD-svK"/>
+                                        <constraint firstItem="oiG-Yj-fR1" firstAttribute="top" secondItem="hrI-SU-SFh" secondAttribute="top" constant="-2" id="KUI-v2-Oxz"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
