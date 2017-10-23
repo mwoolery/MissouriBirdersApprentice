@@ -17,6 +17,20 @@ class State{
     {
         return countyArray[index]
     }
+    //add a new county
+    static func addCounty(county: County){
+        countyArray.append(county)
+    }
+    // may not need this after all
+//    static func addBird(county: County, bird:Bird){
+//        //retrieve the county element in the countyArray and edit and replace it
+//        let idx:Int = countyArray.index(of: county)!
+//        let newCounty:County = countyArray[idx]
+//        newCounty.birdArray.append(bird)
+//        countyArray[idx] = newCounty
+//
+//
+//    }
     
 }
 

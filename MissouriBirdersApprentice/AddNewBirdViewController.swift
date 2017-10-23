@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
+import CoreLocation
 class AddNewBirdViewController: UIViewController {
-
+    var county:County!
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var latinNameTF: UITextField!
     @IBOutlet weak var latitudeTF: UITextField!
@@ -22,6 +22,14 @@ class AddNewBirdViewController: UIViewController {
     @IBAction func cancelBTN(_ sender: Any) {
     }
     @IBAction func doneBTN(_ sender: Any) {
+        let newLatitude: Double = Double(latitudeTF.text!)!
+        let newLongitude: Double = Double(longitudeTF.text!)!
+        let birdToAdd = Bird(name: nameTF.text!, latinName: latinNameTF.text!, location: CLLocationCoordinate2D(latitude: newLatitude, longitude: newLongitude ), dateFirstSighted: String(describing: Date()))
+        //set num sightings to 1 because since we first saw it, we've seen it once
+        birdToAdd.updateNumSightings(num: 1)
+        county.birdArray.append(birdToAdd)
+        
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -9,7 +9,11 @@
 import Foundation
 
 //used to make a county and has birds found in county
-class County{
+class County: Equatable{
+    static func ==(lhs: County, rhs: County) -> Bool {
+        return lhs.name == rhs.name
+    }
+    
     var name: String
     //array of birds
     var birdArray:[Bird] = []
@@ -18,5 +22,6 @@ class County{
         self.name = name
         self.birdArray = birdArray
     }
+    //have to make sure it is added to an existing county
     
 }
