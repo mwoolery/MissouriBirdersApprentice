@@ -12,18 +12,10 @@ import CoreLocation
 class CountyTableViewController: UITableViewController {
     
     
-    
-    
-    
-    
-    
-    
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationItem.title = State.countyArray.name      // make the navigation item and register the cell
-        //self.navigationItem.title = "Counties"
+        self.navigationItem.title = "Counties"
 //        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Go Back!", style: .done, target: nil, action: nil)
 //        
         //tableView.register(CountyTableViewCell.self, forCellReuseIdentifier: "county_cell")

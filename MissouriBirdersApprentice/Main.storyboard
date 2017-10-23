@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KQm-Dz-OT3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KQm-Dz-OT3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="bMw-Dy-atS" kind="show" identifier="showbird" id="UUC-hP-ZWi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,7 +38,7 @@
                     <navigationItem key="navigationItem" id="glE-fV-I4l">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="omR-pS-Nhc">
                             <connections>
-                                <segue destination="Vza-fB-vzQ" kind="presentation" id="4ys-ao-U6n"/>
+                                <segue destination="Vza-fB-vzQ" kind="presentation" identifier="" id="4ys-ao-U6n"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -283,7 +286,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23S-jy-d1i">
-                                <rect key="frame" x="58" y="133" width="61" height="20"/>
+                                <rect key="frame" x="58" y="177" width="61" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61" id="eTE-I6-aMx"/>
                                 </constraints>
@@ -292,19 +295,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sightings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsU-sU-8hK">
-                                <rect key="frame" x="58" y="210" width="76.5" height="21"/>
+                                <rect key="frame" x="58" y="254" width="76.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eou-lb-mih">
-                                <rect key="frame" x="184" y="201" width="25" height="30"/>
+                                <rect key="frame" x="184" y="245" width="25" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHx-OH-YKf">
-                                <rect key="frame" x="184" y="134" width="134" height="21"/>
+                                <rect key="frame" x="184" y="178" width="134" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="nbt-VA-f1e"/>
                                 </constraints>
@@ -313,7 +316,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsG-tX-gO6">
-                                <rect key="frame" x="184" y="72" width="134" height="21"/>
+                                <rect key="frame" x="184" y="116" width="134" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="Ldu-hZ-HIK"/>
                                 </constraints>
@@ -322,7 +325,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYD-A1-bEY">
-                                <rect key="frame" x="58" y="71" width="70.5" height="21"/>
+                                <rect key="frame" x="58" y="115" width="70.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -335,7 +338,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDH-7G-YJP">
-                                <rect key="frame" x="126" y="276" width="122" height="30"/>
+                                <rect key="frame" x="126" y="320" width="122" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="122" id="Txm-9c-gj6"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="lZd-zK-Ug2"/>
@@ -383,7 +386,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KQm-Dz-OT3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XrO-lk-YcZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

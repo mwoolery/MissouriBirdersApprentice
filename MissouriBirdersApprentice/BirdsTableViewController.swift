@@ -23,6 +23,9 @@ class BirdsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -53,11 +56,19 @@ class BirdsTableViewController: UITableViewController {
     }
     
      //makes the individual birds controller
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let birdVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "bird_view_controller") as! BirdViewController
-        birdVC.bird = county.birdArray[indexPath.row]
-        self.navigationController?.pushViewController(birdVC, animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showbird"{
+        let birdVC = segue.destination as! BirdViewController
+        birdVC.bird = county.birdArray[(tableView.indexPathForSelectedRow?.row)!]
+        }
+        else{
+            let newBirdVC = segue.destination as! AddNewBirdViewController
+            newBirdVC.county = county
+        }
+        
     }
+    
 
     @objc @IBAction func addNewBird(sender:AnyObject?){
         let newBirdVC:AddNewBirdViewController = AddNewBirdViewController()
