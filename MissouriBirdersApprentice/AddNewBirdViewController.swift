@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import CoreLocation
 class AddNewBirdViewController: UIViewController {
     var county:County!
@@ -20,16 +21,34 @@ class AddNewBirdViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func cancelBTN(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func doneBTN(_ sender: Any) {
-        let newLatitude: Double = Double(latitudeTF.text!)!
-        let newLongitude: Double = Double(longitudeTF.text!)!
-        let birdToAdd = Bird(name: nameTF.text!, latinName: latinNameTF.text!, location: CLLocationCoordinate2D(latitude: newLatitude, longitude: newLongitude ), dateFirstSighted: String(describing: Date()))
-        //set num sightings to 1 because since we first saw it, we've seen it once
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let newLatitude = Double(latitudeTF.text!)
+        let newLongitude = Double(longitudeTF.text!)
+        let now = NSDate()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-YY"
+        let date = dateFormatter.string(from: now as Date)
+        var location:CLLocationCoordinate2D = CLLocationCoordinate2D()
+        location.latitude = newLatitude!
+        location.longitude = newLongitude!
+        //let month = calendar.component(.month, from: date)
+        
+        let birdToAdd = Bird(name: nameTF.text!, latinName: latinNameTF.text!, location: location, dateFirstSighted: date)
+        
+        // Some type checking
+//        if (nameTF != nil && nameTF.text != "" && latinNameTF != nil && latinNameTF.text != "" && latitudeTF != nil && longitudeTF != nil){
+//        //set num sightings to 1 because since we first saw it, we've seen it once
+//        birdToAdd.updateNumSightings(num: 1)
+//        county.birdArray.append(birdToAdd)
+//        }
+        //rint(birdToAdd)
         birdToAdd.updateNumSightings(num: 1)
-        county.birdArray.append(birdToAdd)
         
-        
+        print(birdToAdd)
+        county.addBird(bird: birdToAdd)
     }
     
     override func didReceiveMemoryWarning() {

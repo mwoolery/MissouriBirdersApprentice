@@ -22,6 +22,10 @@ class County: Equatable{
         self.name = name
         self.birdArray = birdArray
     }
+    
+    func addBird(bird: Bird){
+        birdArray.append(bird)
+    }
     //have to make sure it is added to an existing county
     
 }

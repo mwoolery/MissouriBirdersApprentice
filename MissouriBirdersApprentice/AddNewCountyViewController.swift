@@ -17,10 +17,18 @@ class AddNewCountyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func cancelBTN(_ sender: Any) {
+        // get rid of the view without updating the array
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func doneBTN(_ sender: Any) {
+   
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let countyToAdd = County(name: countyTF.text!, birdArray: [])
+        State.addCounty(county: countyToAdd)
     }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

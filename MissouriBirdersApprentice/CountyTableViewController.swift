@@ -26,7 +26,7 @@ class CountyTableViewController: UITableViewController {
         //self.navigationItem.title = "Counties"
 //        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Go Back!", style: .done, target: nil, action: nil)
 //        
-        tableView.register(CountyTableViewCell.self, forCellReuseIdentifier: "county_cell")
+        //tableView.register(CountyTableViewCell.self, forCellReuseIdentifier: "county_cell")
     }
     //reload the data each time it appears
     override func viewWillAppear(_ animated: Bool){
