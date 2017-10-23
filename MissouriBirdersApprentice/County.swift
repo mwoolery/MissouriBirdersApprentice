@@ -9,9 +9,14 @@
 import Foundation
 
 //used to make a county and has birds found in county
-struct County{
+class County{
     var name: String
     //array of birds
     var birdArray:[Bird] = []
+    
+    init(name: String, birdArray:[Bird]){
+        self.name = name
+        self.birdArray = birdArray
+    }
     
 }
