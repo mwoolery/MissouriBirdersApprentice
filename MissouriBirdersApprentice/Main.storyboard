@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KQm-Dz-OT3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KQm-Dz-OT3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,12 +18,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bird_cell" id="9kx-FS-oWX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bird_cell" textLabel="Ran-Xk-fdS" detailTextLabel="fhm-oR-XbM" style="IBUITableViewCellStyleSubtitle" id="9kx-FS-oWX">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9kx-FS-oWX" id="Jea-6x-MmN">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ran-Xk-fdS">
+                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fhm-oR-XbM">
+                                            <rect key="frame" x="16" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="bMw-Dy-atS" kind="show" identifier="showbird" id="UUC-hP-ZWi"/>
@@ -300,12 +316,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eou-lb-mih">
-                                <rect key="frame" x="184" y="245" width="25" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHx-OH-YKf">
                                 <rect key="frame" x="184" y="178" width="134" height="21"/>
                                 <constraints>
@@ -348,22 +358,31 @@
                                     <action selector="updateSightingsBTN:" destination="bMw-Dy-atS" eventType="touchUpInside" id="jHg-iG-l03"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sightings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ND2-la-FnY">
+                                <rect key="frame" x="184" y="253" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="ANb-Pd-UhV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ND2-la-FnY" firstAttribute="leading" secondItem="hAe-yy-BwT" secondAttribute="leading" constant="184" id="0ki-1o-ENa"/>
                             <constraint firstAttribute="trailing" secondItem="4MB-6W-kNL" secondAttribute="trailing" constant="57" id="HP5-pQ-9f6"/>
                             <constraint firstItem="23S-jy-d1i" firstAttribute="top" secondItem="qpT-do-kur" secondAttribute="bottom" constant="113" id="Ioi-sx-496"/>
+                            <constraint firstItem="ND2-la-FnY" firstAttribute="top" secondItem="qpT-do-kur" secondAttribute="bottom" constant="189" id="KVy-ew-oXo"/>
                             <constraint firstItem="bsU-sU-8hK" firstAttribute="top" secondItem="qpT-do-kur" secondAttribute="bottom" constant="190" id="NcA-jA-k8n"/>
                             <constraint firstItem="TsG-tX-gO6" firstAttribute="leading" secondItem="hAe-yy-BwT" secondAttribute="leading" constant="184" id="Pad-3P-NCt"/>
                             <constraint firstItem="IYD-A1-bEY" firstAttribute="top" secondItem="qpT-do-kur" secondAttribute="bottom" constant="51" id="PoJ-IL-INg"/>
-                            <constraint firstItem="eou-lb-mih" firstAttribute="leading" secondItem="hAe-yy-BwT" secondAttribute="leading" constant="184" id="Unu-bd-AlA"/>
                             <constraint firstItem="pHx-OH-YKf" firstAttribute="top" secondItem="qpT-do-kur" secondAttribute="bottom" constant="114" id="VzE-lH-aKr"/>
                             <constraint firstItem="pHx-OH-YKf" firstAttribute="leading" secondItem="hAe-yy-BwT" secondAttribute="leading" constant="184" id="Wfg-nY-9gm"/>
                             <constraint firstItem="IYD-A1-bEY" firstAttribute="leading" secondItem="hAe-yy-BwT" secondAttribute="leading" constant="58" id="cJ2-la-Ni1"/>
                             <constraint firstItem="23S-jy-d1i" firstAttribute="leading" secondItem="hAe-yy-BwT" secondAttribute="leading" constant="58" id="cbD-7O-8rS"/>
                             <constraint firstItem="PDH-7G-YJP" firstAttribute="top" secondItem="qpT-do-kur" secondAttribute="bottom" constant="256" id="fKB-fg-ucN"/>
                             <constraint firstItem="PDH-7G-YJP" firstAttribute="leading" secondItem="hAe-yy-BwT" secondAttribute="leading" constant="126" id="kKz-3G-ajz"/>
-                            <constraint firstItem="eou-lb-mih" firstAttribute="top" secondItem="qpT-do-kur" secondAttribute="bottom" constant="181" id="m7m-ZR-D6W"/>
                             <constraint firstItem="4eg-OK-xuk" firstAttribute="top" secondItem="4MB-6W-kNL" secondAttribute="bottom" constant="69" id="miA-KY-d0U"/>
                             <constraint firstItem="bsU-sU-8hK" firstAttribute="leading" secondItem="hAe-yy-BwT" secondAttribute="leading" constant="58" id="p80-BV-WMY"/>
                             <constraint firstItem="TsG-tX-gO6" firstAttribute="top" secondItem="qpT-do-kur" secondAttribute="bottom" constant="52" id="px7-W8-OxO"/>
@@ -373,7 +392,7 @@
                         <outlet property="birdIV" destination="4MB-6W-kNL" id="r8Y-Jc-pTF"/>
                         <outlet property="dateLBL" destination="pHx-OH-YKf" id="U5s-KY-y3h"/>
                         <outlet property="locationLBL" destination="TsG-tX-gO6" id="TNY-Db-3Zj"/>
-                        <outlet property="sightingsTF" destination="eou-lb-mih" id="T2C-T4-28K"/>
+                        <outlet property="sightingsLBL" destination="ND2-la-FnY" id="zH4-uz-CKH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEA-WP-hDA" userLabel="First Responder" sceneMemberID="firstResponder"/>

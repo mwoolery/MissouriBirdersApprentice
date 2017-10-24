@@ -24,7 +24,9 @@ class AddNewBirdViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        // variables for latitude and longitue also a date format generator
+        // I only want to do all of this though if the values are acceptable
+        if (nameTF.text! != "" && latinNameTF.text! != "" && latitudeTF.text! != "" && longitudeTF.text! != "" && Double(latitudeTF.text!) != nil && Double(longitudeTF.text!) != nil) {
         let newLatitude = Double(latitudeTF.text!)
         let newLongitude = Double(longitudeTF.text!)
         let now = NSDate()
@@ -34,21 +36,15 @@ class AddNewBirdViewController: UIViewController {
         var location:CLLocationCoordinate2D = CLLocationCoordinate2D()
         location.latitude = newLatitude!
         location.longitude = newLongitude!
-        //let month = calendar.component(.month, from: date)
         
+        //make the bird to add
         let birdToAdd = Bird(name: nameTF.text!, latinName: latinNameTF.text!, location: location, dateFirstSighted: date)
         
-        // Some type checking
-//        if (nameTF != nil && nameTF.text != "" && latinNameTF != nil && latinNameTF.text != "" && latitudeTF != nil && longitudeTF != nil){
-//        //set num sightings to 1 because since we first saw it, we've seen it once
-//        birdToAdd.updateNumSightings(num: 1)
-//        county.birdArray.append(birdToAdd)
-//        }
-        //rint(birdToAdd)
-        birdToAdd.updateNumSightings(num: 1)
+        
         
         print(birdToAdd)
         county.addBird(bird: birdToAdd)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,15 +52,6 @@ class AddNewBirdViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

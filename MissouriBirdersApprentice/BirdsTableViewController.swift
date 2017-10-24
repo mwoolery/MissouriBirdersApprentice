@@ -15,32 +15,27 @@ class BirdsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // set title in nav bar
         self.navigationItem.title = county.name
-        //tableView.register(CountyTableViewCell.self, forCellReuseIdentifier: "bird_cell")
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
     override func viewWillAppear(_ animated: Bool) {
+        // so it refreshes the data after birds are added
         tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
-    // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         
         return county.birdArray.count
     }
@@ -57,12 +52,14 @@ class BirdsTableViewController: UITableViewController {
     
      //makes the individual birds controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        // this block of code is used to decide which segue to follow since there is 2 different ones
         if segue.identifier == "showbird"{
+            // to get the bird view controller
         let birdVC = segue.destination as! BirdViewController
         birdVC.bird = county.birdArray[(tableView.indexPathForSelectedRow?.row)!]
         }
         else{
+            //to get the add new bird view controller
             let newBirdVC = segue.destination as! AddNewBirdViewController
             newBirdVC.county = county
         }

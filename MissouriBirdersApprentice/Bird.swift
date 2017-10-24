@@ -37,11 +37,11 @@ class Bird : Equatable, CustomStringConvertible{
         self.latinName = latinName
         self.location = location
         self.dateFirstSighted = dateFirstSighted
-        self.numberOfSightings = 0
+        self.numberOfSightings = 1
     }
-    //updates the number of sightings to what number is passed in
-    func updateNumSightings(num:Int){
-        numberOfSightings = num
+    //updates the number of sightings by incrementing it
+    func updateNumSightings(){
+        numberOfSightings = numberOfSightings + 1
     }
     // used to print the location
     func locationToString() ->String {

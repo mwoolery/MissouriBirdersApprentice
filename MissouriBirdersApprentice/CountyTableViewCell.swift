@@ -8,7 +8,7 @@
 
 import UIKit
 
-// for the county table cells
+//This Class is actually unused now, I used this when I did the non story boarded version, keeping to refer for later assignments
 class CountyTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?){

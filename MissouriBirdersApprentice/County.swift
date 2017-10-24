@@ -22,7 +22,7 @@ class County: Equatable{
         self.name = name
         self.birdArray = birdArray
     }
-    
+    //used to add bird
     func addBird(bird: Bird){
         birdArray.append(bird)
     }
